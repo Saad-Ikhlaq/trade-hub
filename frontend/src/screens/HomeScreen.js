@@ -38,7 +38,7 @@ const HomeScreen = () => {
         {userInfo && !isVerified && (
           <Message variant="danger">Please Verify Your Email</Message>
         )}
-        <h1>welcome to Super Works Store</h1>
+        <h1>welcome to Trade Hub</h1>
         {!keyword && <ProductCarousel />}
         <h1>Latest Products</h1>
         {loading ? (

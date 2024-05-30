@@ -5,14 +5,13 @@ export const sendEmail = (name, email, verificationString) =>{
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'abdurrafaykhawer20@gmail.com',
-      pass: 'iacjbptwqmebulim'
+      user: 'bcsf20a019@pucit.edu.pk',
+      pass: '!be9317f9b8'
     }
   });
   
   var mailOptions = {
-    from: 'abdurrafaykhawer10@gmail.com',
-    // to: 'abdurrafaykhawer20@gmail.com', //email
+    from: 'bcsf20a019@pucit.edu.pk',
     to: email,
     subject: 'Sending Email using Node.js',
     text: `Hey ${name} please verify your email address: 
