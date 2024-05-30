@@ -29,7 +29,7 @@ const HomeScreen = () => {
   }, [dispatch, keyword]);
 
   useEffect(() => {
-    dispatch({ type: ORDER_DETAILS_RESET })
+    dispatch({ type: ORDER_DETAILS_RESET });
   }, []);
 
   return (

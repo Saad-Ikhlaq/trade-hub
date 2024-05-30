@@ -11,7 +11,6 @@ import LoginButton from "../components/Login";
 import LogoutButton from "../components/Logout";
 
 const LoginScreen = () => {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -57,7 +56,7 @@ const LoginScreen = () => {
         <Form.Group controlId="password" className="my-3">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            type="string"
+            type="password"
             value={password}
             placeholder="Your password"
             onChange={(e) => {
@@ -81,8 +80,8 @@ const LoginScreen = () => {
       </Row>
 
       <Row className="py-3">
-        <Col> 
-          <LoginButton className="google-button"/>
+        <Col>
+          <LoginButton className="google-button" />
         </Col>
       </Row>
     </FormContainer>

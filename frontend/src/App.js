@@ -20,19 +20,24 @@ import OrderListScreen from "./screens/OrderListScreen";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import VerificationScreen from "./screens/VerificationScreen";
 import PleaseVerifyEmailScreen from "./screens/PleaseVerifyEmailScreen";
+import Chatbot from "./components/Chatbot";
 
 const App = () => {
-
   return (
     <div className="app-container">
       <div>
-
         <GoogleOAuthProvider>
           <Router>
             <Header />
             <Routes>
-              <Route path="/admin/productList" element={<ProductListScreen />} />
-              <Route path="/admin/product/:id/edit" element={<ProductEditScreen />} />
+              <Route
+                path="/admin/productList"
+                element={<ProductListScreen />}
+              />
+              <Route
+                path="/admin/product/:id/edit"
+                element={<ProductEditScreen />}
+              />
               <Route path="/admin/userList" element={<UserListScreen />} />
               <Route path="/admin/user/:id/edit" element={<UserEditScreen />} />
               <Route path="/admin/orderList" element={<OrderListScreen />} />
@@ -48,8 +53,15 @@ const App = () => {
               <Route path="/products/:id" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/cart/:id" element={<CartScreen />} />
-              <Route path="/verify-email/:verificationString" element={<VerificationScreen />} />
-              <Route path="/please-verify" element={<PleaseVerifyEmailScreen />} />
+              <Route
+                path="/verify-email/:verificationString"
+                element={<VerificationScreen />}
+              />
+              <Route
+                path="/please-verify"
+                element={<PleaseVerifyEmailScreen />}
+              />
+              <Route path="/chatbot" element={<Chatbot />} />
             </Routes>
           </Router>
         </GoogleOAuthProvider>
