@@ -5,7 +5,6 @@ import "../chatbot.css"; // Import the CSS file
 const Chatbot = () => {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-
   const sendMessage = async () => {
     if (input.trim() === "") return;
 
@@ -21,8 +20,7 @@ const Chatbot = () => {
         },
         {
           headers: {
-            Authorization:
-              "Bearer sk-proj-aKX7gF7cFLQR2Kod2aDRT3BlbkFJaKZXygFqXtiQ4dhCPYIt",
+            Authorization: `Bearer ${process.env.REACT_APP_OPEN_API_KEY}`,
             "Content-Type": "application/json",
           },
         }
