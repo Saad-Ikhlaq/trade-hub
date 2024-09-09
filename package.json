@@ -36,6 +36,7 @@
     "react-transition-group": "^4.4.2",
     "regenerator-runtime": "^0.13.9",
     "scheduler": "^0.23.0",
+    "styled-components": "^6.1.11",
     "uncontrollable": "^7.2.1",
     "uuid": "^8.3.2",
     "warning": "^4.0.3"

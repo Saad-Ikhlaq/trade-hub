@@ -17,39 +17,38 @@ const RegisterScreen = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const userRegister = useSelector((state) => state.userRegister);
-  const {error, loading, userInfo, verificationString} = userRegister
+  const { error, loading, userInfo, verificationString } = userRegister;
 
   const redirect = location.search ? location.search.split("=")[1] : "/";
 
   useEffect(() => {
     if (userInfo) {
       // navigate(redirect);
-      navigate('/please-verify');
+      navigate("/please-verify");
     }
   }, [userInfo, redirect, navigate]);
-    
+
   const dispatch = useDispatch();
 
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if(password === confirmPassword){
-    //Dispatach
-    dispatch(register(name, email, password));
-    }
-    else{
-        setMessage('Password should be same');
+    if (password === confirmPassword) {
+      //Dispatach
+      dispatch(register(name, email, password));
+    } else {
+      setMessage("Password should be same");
     }
   };
 
   return (
     <FormContainer>
-        <h1>Register</h1>
-        {message && <Message variant='danger'>{message}</Message>}
-        {error && <Message variant='danger'>{error}</Message>}
-        {loading && <Loader />}
+      <h1>Register</h1>
+      {message && <Message variant="danger">{message}</Message>}
+      {error && <Message variant="danger">{error}</Message>}
+      {loading && <Loader />}
       <Form onSubmit={submitHandler}>
-      <Form.Group controlId="name" className="my-3">
+        <Form.Group controlId="name" className="my-3">
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="string"
@@ -74,7 +73,7 @@ const RegisterScreen = () => {
         <Form.Group controlId="password" className="my-3">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            type="string"
+            type="password"
             value={password}
             placeholder="Your password"
             onChange={(e) => {

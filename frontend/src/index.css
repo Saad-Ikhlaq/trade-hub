@@ -1,39 +1,38 @@
-#root{
-
-    position: relative;
+#root {
+  position: relative;
 }
-main{
-    height: 80vh;
+main {
+  height: 80vh;
 }
-h3{
-    padding: 1rem;
+h3 {
+  padding: 1rem;
 }
-h1{
-    padding: 1.8rem 0;
+h1 {
+  padding: 1.8rem 0;
 }
-h2{
-    padding: 1.4rem 0;
-}
-
-.rating span{
-    margin: 0.2rem;
-}
-.product-card{
-    height: 400px;
-}
-.product-card .card-title{
-    height: 60px;
+h2 {
+  padding: 1.4rem 0;
 }
 
-.footer-container{
-    text-align: center;
-    margin-top: 200px;
-    background-color: rgb(163, 162, 162);
-    width: 100%;
-    padding: 20px;
-    font-size: 30px;
-    color: black;
-    height: 90px;
+.rating span {
+  margin: 0.2rem;
+}
+.product-card {
+  height: 400px;
+}
+.product-card .card-title {
+  height: 60px;
+}
+
+.footer-container {
+  text-align: center;
+  margin-top: 200px;
+  background-color: rgb(163, 162, 162);
+  width: 100%;
+  padding: 20px;
+  font-size: 30px;
+  color: black;
+  height: 90px;
 }
 
 /* carousel */
@@ -63,7 +62,7 @@ h2{
   margin: 0 auto;
 }
 
-.google-button{
+.google-button {
   height: 100px;
   width: 300px;
   background-color: blue;
@@ -71,10 +70,25 @@ h2{
   font-weight: bold;
 }
 
-.app-container{
+.app-container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
+.user-message {
+  text-align: right;
+  background-color: #dcf8c6;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.bot-message {
+  text-align: left;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 5px;
+}

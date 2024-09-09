@@ -1,6 +1,6 @@
 import React from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown, Button } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../actions/userActions";
 import { useNavigate } from "react-router-dom";
@@ -61,8 +61,14 @@ const Header = () => {
                   <LinkContainer to="/admin/orderList">
                     <NavDropdown.Item>Order List</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/Contactus">
+                    <NavDropdown.Item>Contact Us</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
               )}
+              <Button variant="success" onClick={() => navigate("/chatbot")}>
+                Talk to AI expert
+              </Button>{" "}
             </Nav>
           </Navbar.Collapse>
         </Container>
