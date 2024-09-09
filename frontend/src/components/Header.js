@@ -61,6 +61,9 @@ const Header = () => {
                   <LinkContainer to="/admin/orderList">
                     <NavDropdown.Item>Order List</NavDropdown.Item>
                   </LinkContainer>
+                  <LinkContainer to="/Contactus">
+                    <NavDropdown.Item>Contact Us</NavDropdown.Item>
+                  </LinkContainer>
                 </NavDropdown>
               )}
               <Button variant="success" onClick={() => navigate("/chatbot")}>

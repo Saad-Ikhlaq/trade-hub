@@ -21,7 +21,8 @@ import { GoogleOAuthProvider } from "@react-oauth/google";
 import VerificationScreen from "./screens/VerificationScreen";
 import PleaseVerifyEmailScreen from "./screens/PleaseVerifyEmailScreen";
 import Chatbot from "./components/Chatbot";
-
+import ContactUs from "./screens/contactus";
+import FAQ from "./screens/Faq";
 const App = () => {
   return (
     <div className="app-container">
@@ -53,6 +54,9 @@ const App = () => {
               <Route path="/products/:id" element={<ProductScreen />} />
               <Route path="/cart" element={<CartScreen />} />
               <Route path="/cart/:id" element={<CartScreen />} />
+              <Route path="/contactus" element={<ContactUs />} />
+              <Route path="/faq" element={<FAQ/>} />
+
               <Route
                 path="/verify-email/:verificationString"
                 element={<VerificationScreen />}
